@@ -21,6 +21,14 @@
     font-family: "a_mono";
   }
 
+  .focusing .node circle, .focusing .link {
+    //opacity: 0.1;
+  }
+
+  .focusing text {
+    //opacity: 0.3
+  }
+
   #title {
     position: absolute;
     top: 10px;
@@ -41,8 +49,17 @@
   .node {
   }
 
-  .node:hover circle{
+  .node:hover circle {
     opacity: 0.5
+  }
+
+  .node circle.focus,
+  .node.focus circle {
+    opacity: 0.5;
+  }
+
+  .focus text {
+    opacity: 1;
   }
 
   .node text {
@@ -60,12 +77,18 @@
 
   .link {
     stroke: #999;
-    stroke-opacity: .2;
+    opacity: .25;
     fill: transparent;
   }
 
-  marker#suit {
-    opacity: 0.1;
+  .link.in {
+    opacity: 1;
+    stroke: red;
+  }
+
+  .link.out {
+    opacity: 1;
+    stroke: rgb(148, 206, 148);
   }
 
   @font-face {
@@ -125,7 +148,8 @@
           t = target[0].ind;
           link = {
             source: person.ind,
-            target: t
+            target: t,
+            ind: links.length
           }
           var exists = links.filter(function (p) {
             if (p.source == t && p.target == person.ind) return true;
@@ -140,19 +164,21 @@
           }
         }
         else {
-          newperson = {
-            // fullname: friend,
-            url: "#",
-            major: 0,
-            ind: people.length,
-            friends: []
-          }
-          people.push(newperson);
-          link = {
-            source: person.ind,
-            target: newperson.ind
-          }
-          links.push(link);
+          // Create new people?
+          // ------
+          // newperson = {
+          //   // fullname: friend,
+          //   url: "#",
+          //   major: 0,
+          //   ind: people.length,
+          //   friends: []
+          // }
+          // people.push(newperson);
+          // link = {
+          //   source: person.ind,
+          //   target: newperson.ind
+          // }
+          // links.push(link);
         }
       });
       //{"source":1,"target":0,"value":1},
@@ -184,7 +210,7 @@
 
   // Per-type markers, as they don't inherit styles.
   svg.append("svg:defs").selectAll("marker")
-      .data(["suit", "licensing", "resolved"])
+      .data(["suit"])
     .enter().append("svg:marker")
       .attr("id", String)
       .attr("viewBox", "0 -5 10 10")
@@ -207,6 +233,7 @@
 
     link.enter().append("path")
         .attr("class", "link")
+        .attr("id", function(d){return "l" + d.ind})
         .style("stroke-width", function(d) { return Math.sqrt(d.value); })
         .attr("marker-end", function(d) { return "url(#suit)"; });
 
@@ -214,8 +241,45 @@
         .data(graph.nodes)
       .enter().append("g")
         .attr("class", "node")
+        .attr("id", function(d){return "c" + d.ind})
+        .on("mouseover", function(){
+          $("body").addClass("focusing");
+          d3.select(this).attr("class", "node focus");
+          var focused = this.id.replace("c","");
+
+          // Incoming links
+          focusthese = links.filter(function(link){ return (link.target.ind + "") == focused });
+          $.each(focusthese, function(n, el) {
+            // nodes
+            sel = ("#c"+el.source.ind);
+            d3.select(sel).attr("class", "node focus");
+            // lines
+            lin = ("#l"+el.ind);
+            d3.select(lin).attr("class", "link in");
+          });
+
+          // Outgoing links
+          focusthese = links.filter(function(link){ return (link.source.ind + "") == focused });
+          $.each(focusthese, function(n, el) {
+            // nodes
+            sel = ("#c"+el.target.ind);
+            d3.select(sel).attr("class", "node focus");
+            // lines
+            lin = ("#l"+el.ind);
+            d3.select(lin).attr("class", "link out");
+          });
+
+        })
+        .on("mouseout", function(){
+          $("body").removeClass("focusing");
+          d3.select(this).attr("class", "node");
+          d3.selectAll(".focus").attr("class", "node");
+          d3.selectAll(".in").attr("class", "link");
+          d3.selectAll(".out").attr("class", "link");
+        });
         
-    var circ = node.append("circle").attr("r", 10)
+    var circ = node.append("circle")
+        .attr("r", 10)
         .style("fill", function(d) { return color(d.major); })
         .call(force.drag);
 
@@ -244,7 +308,6 @@
 
       text.attr("x", function(d) { return d.x + 2; })
           .attr("y", function(d) { return d.y + 3; });
-
     }
 
     $(window).resize(function(){
