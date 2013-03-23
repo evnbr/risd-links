@@ -276,7 +276,7 @@ Benjamin Kicic = http://benjaminkicic.com/ = furniture
 
 Toril Orlesky = http://cargocollective.com/toril = illustration
 
-Deborah Fulop = http://deborafulop.com/ = illustration
+Debora Fulop = http://deborafulop.com/ = illustration
 	Sheila Santa Maria
 	Jordan Phillips
 	Mary Tao
@@ -300,3 +300,26 @@ Sara Bloem = http://sarabloem.com/ = ?
 	Peter van Dijk
 
 Kellan Jett = http://jettpack.tumblr.com/ = illustration
+
+Joseph Burhoe = http://cargocollective.com/josephburhoe/ = textiles
+
+Jonah Wilcox-Healey = http://jonahwh.com/ = id
+
+Maeve Jopson = http://maevejopson.com/ = id
+	Emma Beede
+	Felicia Hung
+	Kalya O'Donoghue
+	Thor Oren
+	Cynthia Poon
+	Rachael Rendely
+	Kaitlyn Schoeck
+
+Kaitlyn Schoeck = http://kms-id.com/ = id
+
+Emma Beede = http://emmabeede.com/ = ia
+
+Kalya O'Donoghue = http://kalya-odonoghue.squarespace.com/
+
+Felicia Hung = http://feliciahung.com/ = furniture
+
+Rachel Rendely = http://rachaelrendely.com/ = furniture
