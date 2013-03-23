@@ -247,6 +247,7 @@ Jess X Chen = http://jessxchen.com/ = fav
 	Andrew Murdock
 	Tessa Zeng
 	Phoebe Wahl 
+	Yung Hui 
 
 Elizabeth Roberge = http://elizabethroberge.carbonmade.com/ = printmaking
 
@@ -259,3 +260,18 @@ Carly Ayres = http://www.carlyayres.com/ = id
 Sarah Pease = http://www.sarahpease.com/ = furniture
 
 Jamie Wolfond = http://www.jamiewolfond.com/ = furniture
+
+Stephanie Veccelio = http://www.stephanievecellio.com/ = illustration
+
+Derek Timm-Brock = http://www.derektimmbrock.com/ = illustration
+	Yung Hui
+	Benjamin Kicic
+	Emily Oliveira
+	Toril Orlesky
+	Kelsi Ricks
+
+Yung Hui = http://yunghui.com/ = illustration
+
+Benjamin Kicic = http://benjaminkicic.com/ = furniture
+
+Toril Orlesky = http://cargocollective.com/toril = illustration
