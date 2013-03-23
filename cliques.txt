@@ -45,6 +45,8 @@ Andrew Lu= http://andrew.lu/ = gd
 
 Annie Wu = http://cargocollective.com/anniewu = id
 
+Brigid Rau = http://brigid-rau.com/ = textiles
+
 Christina Xu= http://cxudesign.com/ = id
 	Mary Boyle
 	Daniel Chang
@@ -218,3 +220,42 @@ Wesley Chau= http://wesleychau.com/ = id
 	Tori Hinn
 	Marianne Koo
 	Christina Xu
+
+Phoebe Wahl = http://phoebewahl.com/ = illustration
+	Alison Rutsch
+	Sarah Green
+	Timothy Metcalf
+	Benjamin Nadler
+	Stephanie Swart
+	Elizabeth Roberge
+	Jess X Chen
+	Marion Gast
+	Abrahm Guthrie-Potter
+	Max Spitzer
+	SouleMama
+	Squam Art Workshops
+	Christine Chitnis
+	Taproot Magazine
+
+Ivy Hu = http://ivyhu.com/ = id
+
+Jess X Chen = http://jessxchen.com/ = fav
+	Noel'le Longhaul 
+	Brenden Cicoria
+	Peter Pa
+	Andreas Nicholas 
+	Andrew Murdock
+	Tessa Zeng
+	Phoebe Wahl 
+
+Elizabeth Roberge = http://elizabethroberge.carbonmade.com/ = printmaking
+
+Ben Nadler = http://www.bennadlercomics.com/ = illustration
+
+Ayodhya Ouditt = http://aouditt.carbonmade.com/ = id
+
+Carly Ayres = http://www.carlyayres.com/ = id
+
+Sarah Pease = http://www.sarahpease.com/ = furniture
+
+Jamie Wolfond = http://www.jamiewolfond.com/ = furniture

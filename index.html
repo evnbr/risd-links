@@ -152,6 +152,8 @@
   var force = d3.layout.force()
       .charge(-720)
       .linkDistance(120)
+      //.linkStrength(0.9)
+      .gravity(0.2)
       .size([width, height]);
 
   var svg = d3.select("body").append("svg")
