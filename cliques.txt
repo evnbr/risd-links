@@ -341,3 +341,16 @@ Claudia Leung = http://www.claudialeung.com/ = furniture
 Claire Watson = http://www.ccwatson.com/ = architecture 
 
 Sarah Lin = http://sarahlindesigns.com/ = gd
+
+Jake Cooper = http://www.jakecooperdesign.com/ = gd
+	Andy Romer
+	Cory Zapatka
+	Mathew Mcnamara
+	Dani Cox
+	Holly Broussard
+	Kristin Silva
+	Jess Resnick
+	Dani Balenson
+	Minali Chatani
+	Emily Edelman
+	Colin Prahl
