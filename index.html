@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+
+<head>
+  <title>Clique</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <style>
+
+  html, body, h1, h2, h3, h4, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Apercu Mono";
+  }
+
+  #title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 600px;
+    font-weight: normal;
+  }
+
+  .node {
+    //stroke: #fff;
+    //stroke-width: 1.5px;
+  }
+
+  .node text {
+    font-size: 10px;
+    pointer-events: none;
+  }
+
+  .node circle {
+    opacity: 0.3
+  }
+
+  .link {
+    stroke: #999;
+    stroke-opacity: .2;
+  }
+
+  </style>
+</head>
+
+<!-- Body -->
+
+<body>
+
+  <h1 id="title">Links between portfolio sites in the RISD graduating class of 2014</h1>
+
+  <!-- Script -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script>
+
+  people = [];
+  links = [];
+
+  $.get('cliques.txt', function(data) {    
+    var lines = data.split("\n");
+    $.each(lines, function(n, elem) {
+      if (elem.indexOf("\t") == 0) {
+        friend = $.trim(elem.replace("\t", ""));
+        currentperson.friends.push(friend);
+      }
+      else if (elem !== "") {
+        p = elem.split("=");
+        currentperson = {
+          fullname: $.trim(p[0]),
+          url: p[1],
+          major: p[2],
+          ind: people.length,
+          friends: []
+        };
+        people.push(currentperson);
+      }
+    });
+    $.each(people, function(i, person){
+      $.each(person.friends, function(j, friend){
+        var target = people.filter(function (p) { return p.fullname == friend });
+        if (target[0] !== undefined) {
+          t = target[0].ind;
+          link = {
+            source: person.ind,
+            target: t
+          }
+          var exists = links.filter(function (p) {
+            if (p.source == t && p.target == person.ind) return true;
+            else return false;
+          });
+          if (exists[0] !== undefined) {
+            exists[0]["value"] = 10;
+          }
+          else {
+            links.push(link);
+          }
+        }
+        else {
+          newperson = {
+            fullname: friend,
+            url: "#",
+            major: 0,
+            ind: people.length,
+            friends: []
+          }
+          people.push(newperson);
+          link = {
+            source: person.ind,
+            target: newperson.ind
+          }
+          links.push(link);
+        }
+      });
+      //{"source":1,"target":0,"value":1},
+    });
+    var data = {links: links, nodes: people};
+    makeGraph(data);
+
+  });
+
+  </script>
+  <script>
+  var width = $(window).width(), //960,
+      height = $(window).height(); //500;
+
+  var color = d3.scale.category20();
+
+  var force = d3.layout.force()
+      .charge(-720)
+      .linkDistance(120)
+      .size([width, height]);
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  function makeGraph(graph) {
+    force
+        .nodes(graph.nodes)
+        .links(graph.links)
+        .start();
+
+    var link = svg.selectAll(".link")
+        .data(graph.links)
+      .enter().append("line")
+        .attr("class", "link")
+        .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+    var node = svg.selectAll(".node")
+        .data(graph.nodes)
+      .enter().append("g")
+        .attr("class", "node")
+        
+    var circ = node.append("circle").attr("r", 10)
+        .style("fill", function(d) { return color(d.major); })
+        .call(force.drag);
+
+    var text = node.append("text")
+        .text(function(d) { return d.fullname; })
+        .style("fill", function(d) { return color(d.major); });
+
+    force.on("tick", function() {
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      circ.attr("cx", function(d) { return d.x; })
+          .attr("cy", function(d) { return d.y; });
+
+      text.attr("x", function(d) { return d.x; })
+          .attr("y", function(d) { return d.y; });
+
+    });
+  }
+
+  </script>
+
+</body>
+</html>
