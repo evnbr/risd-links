@@ -223,7 +223,9 @@
         .append("text").text(function(d) { return d.fullname; })
         .style("fill", function(d) { return color(d.major); });
 
-    force.on("tick", function() {
+    force.on("tick", update);
+
+    function update() {
       // link.attr("x1", function(d) { return d.source.x; })
       //     .attr("y1", function(d) { return d.source.y; })
       //     .attr("x2", function(d) { return d.target.x; })
@@ -243,20 +245,21 @@
       text.attr("x", function(d) { return d.x + 2; })
           .attr("y", function(d) { return d.y + 3; });
 
+    }
+
+    $(window).resize(function(){
+        width = $(window).width();
+        height = $(window).height();
+
+        svg
+          .attr("width", width)
+          .attr("height", height);
+        force.size([width, height]);
+
+        update();
     });
 
-
   }
-
-  $(window).resize(function(){
-      width = $(window).width();
-      height = $(window).height();
-
-      svg
-        .attr("width", width)
-        .attr("height", height);
-      force.size([width, height]);
-  });
 
   </script>
 
