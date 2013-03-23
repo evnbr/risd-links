@@ -57,6 +57,8 @@ Cory Zapatka = http://www.coryzapatka.com/ = fav
 
 Cynthia Poon = http://cynthiapoon.com/ = id
 
+Daisy Sun = http://daisy-sun.com/ = id
+
 Dani Balenson= http://danibalenson.com/INFO = gd
 	Emily edelman
 	Tori Hinn
@@ -70,6 +72,8 @@ Dani Balenson= http://danibalenson.com/INFO = gd
 	Andy Romer
 
 Emily Albert= = gd
+
+Isaac Blankensmith = http://www.isaacblankensmith.com/CONTACT = id
 
 Jane Brown = http://www.thisisjanebrown.com/ = gd
 	Scott Brower 
