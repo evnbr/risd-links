@@ -21,12 +21,14 @@
     font-family: "a_mono";
   }
 
-  .focusing .node circle, .focusing .link {
-    //opacity: 0.1;
+  .focusing .node circle,
+  .focusing .link,
+  .focusing .link[data-double = double] {
+    opacity: 0.1;
   }
 
   .focusing text {
-    //opacity: 0.3
+    opacity: 0.3
   }
 
   #title {
@@ -35,6 +37,7 @@
     left: 10px;
     max-width: 600px;
     font-weight: normal;
+    pointer-events: none;
   }
 
   #credit {
@@ -255,10 +258,10 @@
   var color = d3.scale.category20();
 
   var force = d3.layout.force()
-      .charge(-720)
+      .charge(-820)
       .linkDistance(120)
       //.linkStrength(0.9)
-      .gravity(0.2)
+      .gravity(0.25)
       .size([width, height]);
 
   var svg = d3.select("body").append("svg")
