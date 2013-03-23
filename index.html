@@ -83,13 +83,24 @@
 
   .link.in {
     opacity: 1;
-    stroke: red;
+    stroke: magenta;
   }
 
   .link.out {
     opacity: 1;
     stroke: rgb(148, 206, 148);
   }
+
+  .link[data-double = double] {
+    opacity: 0.5;
+  }
+
+  .link.in[data-double = double],
+  .link.out[data-double = double] {
+    stroke: blue;
+    opacity: 1;
+  }
+
 
   @font-face {
       font-family: 'a_mono';
@@ -157,6 +168,8 @@
           });
           if (exists[0] !== undefined) {
             // exists[0]["value"] = 2;
+            exists[0]["doub"] = "double";
+            link["doub"] = "double";
             links.push(link);
           }
           else {
@@ -233,6 +246,7 @@
 
     link.enter().append("path")
         .attr("class", "link")
+        .attr("data-double", function(d){return d.doub})
         .attr("id", function(d){return "l" + d.ind})
         .style("stroke-width", function(d) { return Math.sqrt(d.value); })
         .attr("marker-end", function(d) { return "url(#suit)"; });
