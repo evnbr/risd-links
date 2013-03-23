@@ -39,14 +39,15 @@
   }
 
   .node {
-    //stroke: #fff;
-    //stroke-width: 1.5px;
+  }
+
+  .node:hover circle{
+    opacity: 0.5
   }
 
   .node text {
     font-size: 10px;
     -webkit-user-select: none;
-    // pointer-events: none;
   }
 
    .node text:hover {
@@ -64,7 +65,7 @@
   }
 
   marker#suit {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   @font-face {
@@ -178,6 +179,8 @@
   var svg = d3.select("body").append("svg")
       .attr("width", width)
       .attr("height", height);
+
+  var col = d3.scale.category10();
 
   // Per-type markers, as they don't inherit styles.
   svg.append("svg:defs").selectAll("marker")

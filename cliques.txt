@@ -318,7 +318,7 @@ Kaitlyn Schoeck = http://kms-id.com/ = id
 
 Emma Beede = http://emmabeede.com/ = ia
 
-Kalya O'Donoghue = http://kalya-odonoghue.squarespace.com/
+Kalya O'Donoghue = http://kalya-odonoghue.squarespace.com/ = id
 
 Felicia Hung = http://feliciahung.com/ = furniture
 
@@ -333,3 +333,11 @@ Andreas Nicholas = http://www.andreasnicholas.com/ = fav
 Rita Rosenfeld = http://www.ritaorlovrosenfeld.com/ = furniture
 
 Julia Bowlin = https://risd.digication.com/julia_bowlin/Welcome/published = architecture
+
+Jenny Cheng = http://cargocollective.com/JennyCheng = textiles
+
+Claudia Leung = http://www.claudialeung.com/ = furniture
+
+Claire Watson = http://www.ccwatson.com/ = architecture 
+
+Sarah Lin = http://sarahlindesigns.com/ = gd
