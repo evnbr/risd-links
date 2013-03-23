@@ -13,6 +13,8 @@ Alessandra Bautista= http://alessandrabautista.com/alessandra-bautista-1 = gd
 
 Adam Lowe = http://cargocollective.com/alowedesign = gd
 
+Alex Rowe = http://www.alexroweillustration.com/ = illustration
+
 Andrea Nguyen= http://www.andrealikes.to/talkinthirdperson/ = gd
 	Alessandra Bautista
 	Andrew Lu
@@ -107,6 +109,8 @@ Jon Lucas= http://jon-l.com = gd
 
 Jonathan Key = http://www.jonathangkey.com/About = gd
 
+Kyle Dehovitz = http://www.kyledehovitz.com/ = id
+
 Minali Chatani= http://mchatani.com/27324/links = gd
 	Andy Romer
 	Dani Balenson
@@ -148,6 +152,8 @@ Mary Boyle = http://www.maryeboyle.com/ = id
 	Cynthia Poon
 	Jiwon Rim
 	Christina Xu
+
+Molly Jackson = http://www.mollystormjackson.com/ = illustration
 
 Mary Tao = http://www.marytaodesign.com/information = gd
 	Tori Hinn

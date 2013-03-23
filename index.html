@@ -45,8 +45,12 @@
 
   .node text {
     font-size: 10px;
-    pointer-events: none;
+    // pointer-events: none;
   }
+
+   .node text:hover {
+    text-decoration: underline;
+   }
 
   .node circle {
     opacity: 0.3
@@ -175,8 +179,8 @@
         .style("fill", function(d) { return color(d.major); })
         .call(force.drag);
 
-    var text = node.append("text")
-        .text(function(d) { return d.fullname; })
+    var text = node.append("svg:a").attr("xlink:href", function(d){return d.url;})
+        .append("text").text(function(d) { return d.fullname; })
         .style("fill", function(d) { return color(d.major); });
 
     force.on("tick", function() {
