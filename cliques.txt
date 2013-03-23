@@ -1,4 +1,4 @@
-Alessandra Bautista= http://alessandrabautista.com/alessandra-bautista-1 = gd
+Alessandra Bautista= http://alessandrabautista.com/ = gd
 	Andrea Nguyen
 	Andrew Lu
 	Christina Yoon
@@ -15,7 +15,7 @@ Adam Lowe = http://cargocollective.com/alowedesign = gd
 
 Alex Rowe = http://www.alexroweillustration.com/ = illustration
 
-Andrea Nguyen= http://www.andrealikes.to/talkinthirdperson/ = gd
+Andrea Nguyen= http://www.andrealikes.to/ = gd
 	Alessandra Bautista
 	Andrew Lu
 	Claire Watson
@@ -33,7 +33,7 @@ Andrea Nguyen= http://www.andrealikes.to/talkinthirdperson/ = gd
 	Tabitha Yong
 	Tori Hinn
 
-Andrew Lu= http://andrew.lu/Profile = gd
+Andrew Lu= http://andrew.lu/ = gd
 	Alessandra Bautista
 	Bryan Ku
 	Andrea Nguyen
@@ -45,7 +45,7 @@ Andrew Lu= http://andrew.lu/Profile = gd
 
 Annie Wu = http://cargocollective.com/anniewu = id
 
-Christina Xu= http://cxudesign.com/LINKS = id
+Christina Xu= http://cxudesign.com/ = id
 	Mary Boyle
 	Daniel Chang
 	Wesley Chau
@@ -61,7 +61,7 @@ Cynthia Poon = http://cynthiapoon.com/ = id
 
 Daisy Sun = http://daisy-sun.com/ = id
 
-Dani Balenson= http://danibalenson.com/INFO = gd
+Dani Balenson= http://danibalenson.com/ = gd
 	Emily edelman
 	Tori Hinn
 	Alessandra Bautista
@@ -75,7 +75,7 @@ Dani Balenson= http://danibalenson.com/INFO = gd
 
 Emily Albert= = gd
 
-Isaac Blankensmith = http://www.isaacblankensmith.com/CONTACT = id
+Isaac Blankensmith = http://www.isaacblankensmith.com/ = id
 
 Jane Brown = http://www.thisisjanebrown.com/ = gd
 	Scott Brower 
@@ -107,11 +107,11 @@ Jon Lucas= http://jon-l.com = gd
 	Sang Mun
 	Andrea Nguyen
 
-Jonathan Key = http://www.jonathangkey.com/About = gd
+Jonathan Key = http://www.jonathangkey.com/ = gd
 
 Kyle Dehovitz = http://www.kyledehovitz.com/ = id
 
-Minali Chatani= http://mchatani.com/27324/links = gd
+Minali Chatani= http://mchatani.com/27324/ = gd
 	Andy Romer
 	Dani Balenson
 	Tori Hinn
@@ -124,7 +124,7 @@ Minali Chatani= http://mchatani.com/27324/links = gd
 
 Michelle Wainer= http://cargocollective.com/michellewainer = gd
 
-Marianne Koo= http://mariannekoo.com/LINKS = id
+Marianne Koo= http://mariannekoo.com/ = id
 	Mary Boyle
 	Scott Brower
 	Jane Brown
@@ -155,7 +155,7 @@ Mary Boyle = http://www.maryeboyle.com/ = id
 
 Molly Jackson = http://www.mollystormjackson.com/ = illustration
 
-Mary Tao = http://www.marytaodesign.com/information = gd
+Mary Tao = http://www.marytaodesign.com/ = gd
 	Tori Hinn
 	Alessandra Bautista
 	Andrea Nguyen
@@ -165,11 +165,11 @@ Mary Tao = http://www.marytaodesign.com/information = gd
 
 Nick Wheat= http://nickwhe.at = id
 
-Olivia Luo = http://cargocollective.com/olivialuo/About-Olivia-Luo = gd
+Olivia Luo = http://cargocollective.com/olivialuo/ = gd
 
 Robbie Lillquist = http://www.coroflot.com/rlillq/ = id
 
-Robin Hayashi = http://robinhayashi.com/links = gd
+Robin Hayashi = http://robinhayashi.com/ = gd
 	Marianne Koo
 	Mary Boyle
 	Margaret Kearney
@@ -179,7 +179,7 @@ Robin Hayashi = http://robinhayashi.com/links = gd
 	Andrea Nguyen
 	Cynthia Poon
 
-Scott Brower= http://shbrower.com/links = gd
+Scott Brower= http://shbrower.com/ = gd
 	Wesley Chau
 	Jane Brown
 	Emily Albert
@@ -188,7 +188,7 @@ Scott Brower= http://shbrower.com/links = gd
 
 Tessa Modi = http://t-m-m.net/ = gd
 
-Tori Hinn= http://cargocollective.com/vhinn/tori-hinn-1 = gd
+Tori Hinn= http://cargocollective.com/vhinn/ = gd
 	Alessandra Bautista
 	Andrea Nguyen
 	Andrew Lu
@@ -208,7 +208,7 @@ Tabitha Yong= http://tabithayong.com/ = gd
 
 Victoria Rushton = http://www.victoriarushton.com/ = illustration
 
-Wesley Chau= http://wesleychau.com/Links = id
+Wesley Chau= http://wesleychau.com/ = id
 	Emily Albert
 	Dani Balenson
 	Mary Boyle
