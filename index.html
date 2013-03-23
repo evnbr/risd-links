@@ -45,6 +45,7 @@
 
   .node text {
     font-size: 10px;
+    -webkit-user-select: none;
     // pointer-events: none;
   }
 
@@ -130,7 +131,7 @@
             else return false;
           });
           if (exists[0] !== undefined) {
-            exists[0]["value"] = 2;
+            // exists[0]["value"] = 2;
             links.push(link);
           }
           else {
@@ -184,7 +185,7 @@
     .enter().append("svg:marker")
       .attr("id", String)
       .attr("viewBox", "0 -5 10 10")
-      .attr("refX", 15)
+      .attr("refX", 25)
       .attr("refY", -0.5)
       .attr("markerWidth", 6)
       .attr("markerHeight", 6)
