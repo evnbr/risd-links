@@ -250,7 +250,7 @@ Jess X Chen = http://jessxchen.com/ = fav
 
 Elizabeth Roberge = http://elizabethroberge.carbonmade.com/ = printmaking
 
-Ben Nadler = http://www.bennadlercomics.com/ = illustration
+Benjamin Nadler = http://www.bennadlercomics.com/ = illustration
 
 Ayodhya Ouditt = http://aouditt.carbonmade.com/ = id
 
