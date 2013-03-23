@@ -11,6 +11,8 @@ Alessandra Bautista= http://alessandrabautista.com/alessandra-bautista-1 = gd
 	Tessa Modi
 	Tori Hinn
 
+Adam Lowe = http://cargocollective.com/alowedesign = gd
+
 Andrea Nguyen= http://www.andrealikes.to/talkinthirdperson/ = gd
 	Alessandra Bautista
 	Andrew Lu
