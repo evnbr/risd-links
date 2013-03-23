@@ -46,6 +46,21 @@
     font-weight: normal;
   }
 
+  #find {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #search {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: right;
+  }
+
   .node {
   }
 
@@ -65,6 +80,8 @@
   .node text {
     font-size: 10px;
     -webkit-user-select: none;
+    transition-property: opacity;
+    transition-duration: 0.5s;
   }
 
    .node text:hover {
@@ -72,13 +89,37 @@
    }
 
   .node circle {
-    opacity: 0.3
+    opacity: 0.3;
+    transition-property: stroke-width, opacity, fill-opacity;
+    transition-duration: 0.4s;
+    stroke: transparent;
+    stroke-width: 0px;
+    stroke-opacity: 0.3;
+  }
+
+  .searching .node circle,
+  .searching .node text, 
+  .searching path.link {
+    opacity: 0.2
+  }
+
+  .searching .node[data-current = true] circle{
+    stroke: yellow;
+    stroke-width: 100px;
+    opacity: 1;
+    fill-opacity: 0.2;
+  }
+
+  .searching .node[data-current = true] text {
+    opacity: 1;
   }
 
   .link {
     stroke: #999;
     opacity: .25;
     fill: transparent;
+    transition-property: stroke-color, opacity;
+    transition-duration: 0.2s;
   }
 
   .link.in {
@@ -121,7 +162,12 @@
 
 <body>
 
-  <h1 id="title">Links between portfolio sites in the RISD graduating class of 2013</h1>
+  <h1 id="title">
+    Links between portfolio sites in the RISD graduating class of 2013
+  </h1>
+  <nav id="find">
+    <input id="search" type="text" placeholder="Find someone" />
+  </nav>
   <h5 id="credit">Using d3.js, based on <a href="http://bl.ocks.org/mbostock/4062045">these</a> <a href="http://bl.ocks.org/mbostock/1153292">demos</a> by Mike Bostock. <a href="https://github.com/evanbrooks">Fork me</a> on github. Colors = majors. Some people might not actually be class of 2013.</h5>
 
 
@@ -337,6 +383,34 @@
     });
 
   }
+
+
+  $('#search').bind('input focus', function() { 
+    var val = $(this).val();
+    if (val !== "") {
+      $("body").addClass("searching");
+      search(val);
+    }
+    else {
+      $("body").removeClass("searching");
+    }
+  }).blur(function(){
+    $("body").removeClass("searching");
+  });
+
+  function search(str) {
+    d3.selectAll($("[data-current = true]")).attr("data-current", false);
+    var search = people.filter(function(p){
+      if (p.fullname.toLowerCase().indexOf(str.toLowerCase()) != -1) return true;
+      return false;
+    });
+    $.each(search, function(n, el) {
+      sel = ("#c"+el.ind);
+      d3.select(sel).attr("data-current", true);
+    });
+    return search;
+  }
+
 
   </script>
 
