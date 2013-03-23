@@ -59,6 +59,11 @@
   .link {
     stroke: #999;
     stroke-opacity: .2;
+    fill: transparent;
+  }
+
+  marker#suit {
+    opacity: 0.2;
   }
 
   @font-face {
@@ -125,7 +130,8 @@
             else return false;
           });
           if (exists[0] !== undefined) {
-            exists[0]["value"] = 10;
+            // exists[0]["value"] = 10;
+            links.push(link);
           }
           else {
             links.push(link);
@@ -172,6 +178,20 @@
       .attr("width", width)
       .attr("height", height);
 
+  // Per-type markers, as they don't inherit styles.
+  svg.append("svg:defs").selectAll("marker")
+      .data(["suit", "licensing", "resolved"])
+    .enter().append("svg:marker")
+      .attr("id", String)
+      .attr("viewBox", "0 -5 10 10")
+      .attr("refX", 15)
+      .attr("refY", -1.5)
+      .attr("markerWidth", 6)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+    .append("svg:path")
+      .attr("d", "M0,-5L10,0L0,5");
+
   function makeGraph(graph) {
     force
         .nodes(graph.nodes)
@@ -179,10 +199,12 @@
         .start();
 
     var link = svg.selectAll(".link")
-        .data(graph.links)
-      .enter().append("line")
+        .data(graph.links);
+
+    link.enter().append("path")
         .attr("class", "link")
-        .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+        .style("stroke-width", function(d) { return Math.sqrt(d.value); })
+        .attr("marker-end", function(d) { return "url(#suit)"; });
 
     var node = svg.selectAll(".node")
         .data(graph.nodes)
@@ -198,10 +220,18 @@
         .style("fill", function(d) { return color(d.major); });
 
     force.on("tick", function() {
-      link.attr("x1", function(d) { return d.source.x; })
-          .attr("y1", function(d) { return d.source.y; })
-          .attr("x2", function(d) { return d.target.x; })
-          .attr("y2", function(d) { return d.target.y; });
+      // link.attr("x1", function(d) { return d.source.x; })
+      //     .attr("y1", function(d) { return d.source.y; })
+      //     .attr("x2", function(d) { return d.target.x; })
+      //     .attr("y2", function(d) { return d.target.y; });
+
+      link.attr("d", function(d) {
+        var dx = d.target.x - d.source.x,
+            dy = d.target.y - d.source.y,
+            //dr = Math.sqrt(dx * dx + dy * dy)*2;
+            dr = 0;
+        return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+      });
 
       circ.attr("cx", function(d) { return d.x; })
           .attr("cy", function(d) { return d.y; });
@@ -210,6 +240,8 @@
           .attr("y", function(d) { return d.y; });
 
     });
+
+
   }
 
   $(window).resize(function(){

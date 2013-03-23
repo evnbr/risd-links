@@ -323,3 +323,13 @@ Kalya O'Donoghue = http://kalya-odonoghue.squarespace.com/
 Felicia Hung = http://feliciahung.com/ = furniture
 
 Rachael Rendely = http://rachaelrendely.com/ = furniture
+
+Gracie Canaan = http://www.graciecanaan.com/ = id
+
+Karen Lee = http://karenlee.us/ = textiles
+
+Andreas Nicholas = http://www.andreasnicholas.com/ = fav
+
+Rita Rosenfeld = http://www.ritaorlovrosenfeld.com/ = furniture
+
+Julia Bowlin = https://risd.digication.com/julia_bowlin/Welcome/published = architecture
