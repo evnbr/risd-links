@@ -358,3 +358,5 @@ Jake Cooper = http://www.jakecooperdesign.com/ = gd
 	Minali Chatani
 	Emily Edelman
 	Colin Prahl
+
+Jessica Luscher = https://risd.digication.com/jluscher/About_Me = architexture
