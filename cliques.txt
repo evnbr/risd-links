@@ -275,3 +275,18 @@ Yung Hui = http://yunghui.com/ = illustration
 Benjamin Kicic = http://benjaminkicic.com/ = furniture
 
 Toril Orlesky = http://cargocollective.com/toril = illustration
+
+Deborah Fulop = http://deborafulop.com/ = illustration
+	Sheila Santa Maria
+	Jordan Phillips
+	Mary Tao
+	Kellan Jett
+	Alex Rowe
+	Adam Lowe
+	Sara Bloem
+	Derek Timm-Brock
+	Matt Kamermans
+	Alicia Burnett
+	Victoria Rushton
+
+Alicia Burnett = http://aliciaburnett.com/ = illustration
