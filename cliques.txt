@@ -295,7 +295,7 @@ Jordan Philips = http://jordanphillipsart.com/ = illustration
 
 Alicia Burnett = http://aliciaburnett.com/ = illustration
 
-Sara Bloem = http://sarabloem.com/ = ?
+Sara Bloem = http://sarabloem.com/ = illustration
 	Jaz Bonnin
 	Yung Hui
 	Kellan Jett
@@ -342,7 +342,7 @@ Jenny Cheng = http://cargocollective.com/JennyCheng = textiles
 
 Claudia Leung = http://www.claudialeung.com/ = furniture
 
-Claire Watson = http://www.ccwatson.com/ = architecture 
+Claire Watson = http://www.ccwatson.com/ = architecture
 
 Sarah Lin = http://sarahlindesigns.com/ = gd
 
@@ -359,4 +359,6 @@ Jake Cooper = http://www.jakecooperdesign.com/ = gd
 	Emily Edelman
 	Colin Prahl
 
-Jessica Luscher = https://risd.digication.com/jluscher/About_Me = architexture
+Jessica Luscher = https://risd.digication.com/jluscher/About_Me = architecture
+
+Courtney Sennish = http://www.courtneysennish.com/ = printmaking
