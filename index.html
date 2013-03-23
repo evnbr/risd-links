@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <link id="favicon" rel="shortcut icon" type="image/png" href="favicon.png" />
   <style>
 
   html, body, h1, h2, h3, h4, p, ul, li, figure {
@@ -24,6 +25,15 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    max-width: 600px;
+    font-weight: normal;
+  }
+
+  #credit {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 10px;
     max-width: 600px;
     font-weight: normal;
   }
@@ -55,6 +65,8 @@
 <body>
 
   <h1 id="title">Links between portfolio sites in the RISD graduating class of 2014</h1>
+  <h5 id="credit">Using d3.js, based on <a href="http://bl.ocks.org/mbostock/4062045">this demo</a> by Mike Bostock. <a href="https://github.com/evanbrooks">Fork me</a> on github.</h5>
+
 
   <!-- Script -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -105,7 +117,7 @@
         }
         else {
           newperson = {
-            fullname: friend,
+            // fullname: friend,
             url: "#",
             major: 0,
             ind: people.length,
