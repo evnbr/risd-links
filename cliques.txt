@@ -317,11 +317,11 @@ Debora Fulop = http://deborafulop.com/ = illustration
 
 Sheila Santa Maria = http://www.aicosu.com/ = illustration
 
-Jordan Philips = http://jordanphillipsart.com/ = illustration
+Jordan Phillips = http://jordanphillipsart.com/ = illustration
 
 Alicia Burnett = http://aliciaburnett.com/ = illustration
 
-Sara Bloem = http://sarabloem.com/ = illustration
+Sara Bloem = http://sarabloem.com/ = fav
 	Jaz Bonnin
 	Yung Hui
 	Kellan Jett
