@@ -280,9 +280,23 @@ Derek Timm-Brock = http://www.derektimmbrock.com/ = illustration
 	Benjamin Kicic
 	Emily Oliveira
 	Toril Orlesky
-	Kelsi Ricks
+	Kelsey Ricks
+
+Andrew Cecin = http://portfolios.risd.edu/acecin = id
 
 Yung Hui = http://yunghui.com/ = illustration
+
+Andrew Migliori = http://andrewmigliori.com/ = fav
+
+Sangho Kim = http://www.sanghokim.com/ = id
+
+Laura Gallant = http://lauragallantart.com/ = illustration
+
+Lisa Song = http://cargocollective.com/lisaisong = id
+
+David Harris = http://portfolios.risd.edu/David_Harris = id
+
+Joseph Escobar = http://cargocollective.com/jescobar = id
 
 Benjamin Kicic = http://benjaminkicic.com/ = furniture
 
@@ -325,7 +339,11 @@ Sierra Urich = http://sierraurich.com/ = illustration
 	Anita Tung
 	Molly Walsh
 
-Cindy Kim = http://cindyjihyekim.com/ = 
+Cindy Kim = http://cindyjihyekim.com/ = illustration
+
+Cynthia Oh = http://www.cynthiaoh.com/ = gd
+
+Angela Ko = http://angela-ko.com/ = gd
 
 Anita Tung = http://anitatung.com/ = illustration
 
