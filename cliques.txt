@@ -210,6 +210,12 @@ Tabitha Yong= http://tabithayong.com/ = gd
 
 Victoria Rushton = http://www.victoriarushton.com/ = illustration
 
+Henry Freel = http://henryfreel.com/ = id
+
+Zach Jenkins = http://zacharyjenkins.com/ = id
+
+Justin Henry = http://jhdesign.co/ = id
+
 Wesley Chau= http://wesleychau.com/ = id
 	Emily Albert
 	Dani Balenson
@@ -247,7 +253,13 @@ Jess X Chen = http://jessxchen.com/ = fav
 	Andrew Murdock
 	Tessa Zeng
 	Phoebe Wahl 
-	Yung Hui 
+	Yung Hui
+	Lily Jen
+	Eriko Hattori
+
+Eriko Hattori = http://erikohattori.com/about-contact = painting
+
+Lily Jen = http://lilyjen.com/ = fav
 
 Elizabeth Roberge = http://elizabethroberge.carbonmade.com/ = printmaking
 
@@ -418,8 +430,14 @@ Kelsey Ricks = http://klricks.com/ = illustration
 	Will Denton
 	Hannah Lawler
 	Lauren Ashizawa 
-	Leah Elaine Artwick 
-	Deborah Fulop
+	Leah Artwick 
+	Debora Fulop
+
+Niv Sekar = http://nivsekar.tumblr.com/ = fav
+
+Ivy Bradley = http://ivybradley.tumblr.com/ = illustration
+
+Suzanne Geary = http://www.suzannegeary.com/ = illustration
 
 Eric Ko = http://crybird.net/ = fav
 
@@ -490,6 +508,8 @@ Jake Cooper = http://www.jakecooperdesign.com/ = gd
 	Minali Chatani
 	Emily Edelman
 	Colin Prahl
+
+Satoshi Sakaguchi = http://satoshisakaguchi.com/ = id
 
 Jessica Luscher = https://risd.digication.com/jluscher/About_Me = architecture
 
