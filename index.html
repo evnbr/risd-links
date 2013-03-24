@@ -305,6 +305,7 @@
       .enter().append("g")
         .attr("class", "node")
         .attr("id", function(d){return "c" + d.ind})
+        .call(force.drag)
         .on("mouseover", function(){
           $("body").addClass("focusing");
           d3.select(this).attr("class", "node focus");
@@ -343,12 +344,11 @@
         
     var circ = node.append("circle")
         .attr("r", 10)
-        .style("fill", function(d) { return color(d.major); })
-        .call(force.drag);
+        .style("fill", function(d) { return col(d.major); });
 
     var text = node.append("svg:a").attr("xlink:href", function(d){return d.url;})
         .append("text").text(function(d) { return d.fullname; })
-        .style("fill", function(d) { return color(d.major); });
+        .style("fill", function(d) { return col(d.major); });
 
     force.on("tick", update);
 

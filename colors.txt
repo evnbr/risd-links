@@ -6,3 +6,5 @@ illustration
 furniture
 textiles
 fav
+printmaking
+painting
