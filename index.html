@@ -128,13 +128,28 @@
 
   .link.in {
     opacity: 1;
-    stroke: magenta;
+    stroke: rgb(221, 76, 20);
+    marker-end: url(#in);
   }
 
   .link.out {
     opacity: 1;
-    stroke: lime;
+    stroke: rgb(73, 228, 0);
+    marker-end: url(#out);
   }
+
+  marker#in {
+    fill: rgb(221, 76, 20);
+  }
+
+  marker#out {
+    fill: rgb(73, 228, 0); 
+  }
+
+  marker#double {
+    fill: blue; 
+  }
+
 
   .link[data-double = double] {
     opacity: 0.25;
@@ -143,6 +158,7 @@
   .link.in[data-double = double],
   .link.out[data-double = double] {
     stroke: blue;
+    marker-end: url(#double);
     opacity: 1;
   }
 
@@ -178,6 +194,7 @@
   <!-- Script -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://raw.github.com/d3/d3-plugins/master/fisheye/fisheye.js"></script>
   <script>
 
   people = [];
@@ -261,6 +278,7 @@
   var force = d3.layout.force()
       .charge(-1020)
       .linkDistance(80)
+      //.friction(0.3)
       //.linkStrength(0.9)
       .gravity(0.25)
       .size([width, height]);
@@ -273,7 +291,7 @@
 
   // Per-type markers, as they don't inherit styles.
   svg.append("svg:defs").selectAll("marker")
-      .data(["suit"])
+      .data(["normal", "in", "out", "double"])
     .enter().append("svg:marker")
       .attr("id", String)
       .attr("viewBox", "0 -5 10 10")
@@ -299,7 +317,7 @@
         .attr("data-double", function(d){return d.doub})
         .attr("id", function(d){return "l" + d.ind})
         .style("stroke-width", function(d) { return Math.sqrt(d.value); })
-        .attr("marker-end", function(d) { return "url(#suit)"; });
+        .attr("marker-end", function(d) { return "url(#normal)"; });
 
     var node = svg.selectAll(".node")
         .data(graph.nodes)
@@ -320,7 +338,8 @@
             d3.select(sel).attr("class", "node focus");
             // lines
             lin = ("#l"+el.ind);
-            d3.select(lin).attr("class", "link in");
+            d3.select(lin)
+              .attr("class", "link in");
           });
 
           // Outgoing links
@@ -331,7 +350,8 @@
             d3.select(sel).attr("class", "node focus");
             // lines
             lin = ("#l"+el.ind);
-            d3.select(lin).attr("class", "link out");
+            d3.select(lin)
+              .attr("class", "link out");
           });
 
         })
@@ -368,12 +388,49 @@
       });
 
       circ.attr("cx", function(d) { return d.x; })
-          .attr("cy", function(d) { return d.y; });
+          .attr("cy", function(d) { return d.y; })
+          .attr("r", 10);
 
       text.attr("x", function(d) { return d.x + 2; })
           .attr("y", function(d) { return d.y + 3; });
     }
 
+    // FISHEYE
+    // -------
+    var fisheye = d3.fisheye.circular()
+        .radius(200)
+        .distortion(2);
+
+    svg.on("mousemove", function() {
+      fisheye.focus(d3.mouse(this));
+
+      circ.each(function(d) { d.fisheye = fisheye(d); })
+          .attr("cx", function(d) { return d.fisheye.x; })
+          .attr("cy", function(d) { return d.fisheye.y; });
+          //.attr("r", function(d) { return d.fisheye.z * 10; });
+
+      text.attr("x", function(d) { return d.fisheye.x + 2; })
+          .attr("y", function(d) { return d.fisheye.y + 3; });
+
+
+      link.attr("d", function(d) {
+        var dx = d.target.x - d.source.x,
+            dy = d.target.y - d.source.y,
+            //dr = Math.sqrt(dx * dx + dy * dy)*2;
+            dr = 0;
+        return "M" + d.source.fisheye.x + "," + d.source.fisheye.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.fisheye.x + "," + d.target.fisheye.y;
+      });
+
+
+      // link.attr("x1", function(d) { return d.source.fisheye.x; })
+      //     .attr("y1", function(d) { return d.source.fisheye.y; })
+      //     .attr("x2", function(d) { return d.target.fisheye.x; })
+      //     .attr("y2", function(d) { return d.target.fisheye.y; });
+    });
+
+
+    // RESIZING
+    // --------
     $(window).resize(function(){
         width = $(window).width();
         height = $(window).height();
