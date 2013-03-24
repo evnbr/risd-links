@@ -119,7 +119,7 @@
 
   .link {
     stroke: #999;
-    opacity: .25;
+    opacity: .2;
     fill: transparent;
     transition-property: stroke-color, opacity;
     transition-duration: 0.2s;
@@ -136,7 +136,7 @@
   }
 
   .link[data-double = double] {
-    opacity: 0.4;
+    opacity: 0.25;
   }
 
   .link.in[data-double = double],
@@ -258,7 +258,7 @@
   var color = d3.scale.category20();
 
   var force = d3.layout.force()
-      .charge(-820)
+      .charge(-1020)
       .linkDistance(120)
       //.linkStrength(0.9)
       .gravity(0.25)

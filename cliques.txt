@@ -303,6 +303,138 @@ Sara Bloem = http://sarabloem.com/ = illustration
 	Sierra Urich
 	Peter van Dijk
 
+Sierra Urich = http://sierraurich.com/ = illustration
+	Sara Bloem
+	Allison Boesch
+	Jennifer Marie Casey
+	Yung Hui
+	Cindy Kim
+	Danielle Levine
+	Anita Tung
+	Molly Walsh
+
+Cindy Kim = http://cindyjihyekim.com/ = 
+
+Anita Tung = http://anitatung.com/ = illustration
+
+Molly Walsh = http://molly-walsh.com/ = illustration
+	Leah Artwick
+	Anita Tung
+	Samantha Dempsey
+	Sierra Urich
+	Ebae Kim
+	Adam Paloian
+	Nathaniel Vice
+	Pally Zhang
+	M. R. Trower
+	Karen Sung
+
+Nathaniel Vice = http://cargocollective.com/nathanielvice = architecture
+
+Pally Zhang = http://pallyzhangandtherobot.blogspot.com/ = illustration
+	Anita Tung
+	http://avidistic.tumblr.com/page/2
+	http://dontstopthefun.blogspot.com/
+	Emily Walus
+	Francis Boncales
+	Karen Sung
+	Liz Mooney
+	http://nicholaskole.blogspot.com/
+	http://robgomattepainting.blogspot.com/
+	Sean Devare
+	http://stevensugar.blogspot.com/
+	Claire Lordon
+
+Liz Mooney = http://lizmooneyart.blogspot.com/ = illustration
+
+Adam Paloian = http://www.adampaloian.com/ = illustration
+
+Leah Artwick = http://leahartwick.com/ = illustration
+	Molly Walsh
+	Anita Tung
+	Samantha Dempsey
+	Sierra Urich
+	Ebae Kim
+	Adam Paloian
+	Pally Zhang
+	M. R. Trower
+	Karen Sung
+	Connie Leung
+	Brent Sievers
+	Toril Orlesky
+	Sonnye Lim
+	Shoon Lei
+	Yudi Chen
+	Ana Kim
+	Hillary Barton
+	Alina Popescu
+	Kelsi Ricks
+	Eric Ko
+	Jane Kwon
+	Stephanie Swart
+
+Samantha Dempsey = http://blog.grouchycow.com/ = illustration
+
+Connie Leung = http://connieleung.com/ = fav
+
+Brent Sievers = http://www.brentcsievers.com/ = fav
+
+Yudi Chen = http://yudichen.com/ = illustration
+
+Ana Kim = http://www.anajkim.com/ = fav
+	Alina Popescu
+	Connie Leung
+	Eric Ko
+	Erin Won
+	Gabriela Bello
+	Heeyoung "Gu" Park
+	Hillary Barton
+	Jane Kwon
+	Leah Artwick
+	Michelle Chen
+	Niv Sekar
+	Phillip Ahn
+	Shoon Lei Phyo
+	Shuhan Teoh
+	Sonnye Lim
+	Stephanie Swart
+	Toril Orlesky
+	Yudi Chen
+
+Hillary Barton = http://cargocollective.com/hillarybarton = fav
+
+Alina Popescu = http://aipopescu.com/ = fav
+
+Sonnye Lim = http://sonnyelim.blogspot.com/ = fav
+
+Kelsey Ricks = http://klricks.com/ = illustration
+	Connor Ricks 
+	Emily Oliviera
+	Derek Timm-Brock
+	Myken Bomberger 
+	Suzanne Geary 
+	Ivy Bradley
+	Irene Koh
+	Will Denton
+	Hannah Lawler
+	Lauren Ashizawa 
+	Leah Elaine Artwick 
+	Deborah Fulop
+
+Eric Ko = http://crybird.net/ = fav
+
+Jane Kwon = http://www.jaeheekwon.com/ = fav
+
+Stephanie Swart = http://stephanieswart.com/ = fav
+
+Erin Won = http://www.erin-won.com/ = fav
+
+Ebae Kim = http://ebaekim.com/ = illustration
+
+M. R. Trower = http://mrtrower.com/ = illustration
+
+Karen Sung = http://karenjysung.com/ = illustration
+
 Kellan Jett = http://jettpack.tumblr.com/ = illustration
 
 Joseph Burhoe = http://cargocollective.com/josephburhoe/ = textiles
