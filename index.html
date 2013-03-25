@@ -152,7 +152,7 @@
 
 
   .link[data-double = double] {
-    opacity: 0.25;
+    opacity: 0.3;
   }
 
   .link.in[data-double = double],
@@ -371,13 +371,27 @@
         .append("text").text(function(d) { return d.fullname; })
         .style("fill", function(d) { return col(d.major); });
 
-    force.on("tick", update);
+    //force.on("tick", update);
+
+    setTimeout(function() {
+     
+      // Run the layout a fixed number of times.
+      // The ideal number of times scales with graph complexity.
+      // Of course, don't run too long—you'll hang the page!
+      var n = 18;
+      force.start();
+      for (var i = n * n; i > 0; --i) force.tick();
+      update();
+      //force.stop();
+      force.on("tick", update);
+    }, 10);
+
 
     function update() {
-      // link.attr("x1", function(d) { return d.source.x; })
-      //     .attr("y1", function(d) { return d.source.y; })
-      //     .attr("x2", function(d) { return d.target.x; })
-      //     .attr("y2", function(d) { return d.target.y; });
+      link.attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
 
       link.attr("d", function(d) {
         var dx = d.target.x - d.source.x,
@@ -395,13 +409,7 @@
           .attr("y", function(d) { return d.y + 3; });
     }
 
-    // FISHEYE
-    // -------
-    var fisheye = d3.fisheye.circular()
-        .radius(200)
-        .distortion(2);
-
-    svg.on("mousemove", function() {
+    function update2() {
       fisheye.focus(d3.mouse(this));
 
       circ.each(function(d) { d.fisheye = fisheye(d); })
@@ -421,12 +429,15 @@
         return "M" + d.source.fisheye.x + "," + d.source.fisheye.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.fisheye.x + "," + d.target.fisheye.y;
       });
 
+    }
 
-      // link.attr("x1", function(d) { return d.source.fisheye.x; })
-      //     .attr("y1", function(d) { return d.source.fisheye.y; })
-      //     .attr("x2", function(d) { return d.target.fisheye.x; })
-      //     .attr("y2", function(d) { return d.target.fisheye.y; });
-    });
+    // FISHEYE
+    // -------
+    var fisheye = d3.fisheye.circular()
+        .radius(200)
+        .distortion(2);
+
+    svg.on("mousemove", update2);
 
 
     // RESIZING
